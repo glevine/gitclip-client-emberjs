@@ -1,0 +1,2 @@
+gitclip-client-emberjs
+======================
