@@ -1,0 +1,9 @@
+<h1><a href="{{unbound repo.html_url}}">{{repo.id}}</a>
+<h3>{{repo.description}}</h3>
+<ul>
+    {{#each clipping in clippings}}
+        <li><a href="{{unbound clipping.url}}">{{clipping.url}}</a></li>
+    {{else}}
+        <li>This library has no clippings. Attach the first!</li>
+    {{/each}}
+</ul>
