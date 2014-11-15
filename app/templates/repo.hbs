@@ -3,8 +3,10 @@
 <h3>Clippings</h4>
 <ul>
     {{#each clipping in clippings}}
-        <li><a href="{{unbound clipping.url}}">{{clipping.url}}</a></li>
+        {{#with clipping}}
+            <li><a href="{{unbound clipping.url}}">{{clipping.url}}</a></li>
+        {{/with}}
     {{else}}
-        <li>This library has no clippings. Attach the first!</li>
+        <li>This library has no clippings. Clip the first!</li>
     {{/each}}
 </ul>

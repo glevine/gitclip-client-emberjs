@@ -9,13 +9,8 @@ export default Ember.Route.extend({
 
         return Ember.RSVP.hash({
             repo: store.find('repo', fullName),
-            clippings: [
-                {url: 'http://www.google.com'},
-                {url: 'http://www.yahoo.com'},
-                {url: 'http://www.yelp.com'}
-            ]
+            clippings: store.find('clipping')
         });
-        return this.store.find('repo', fullName);
     },
 
     setupController: function(controller, models) {
